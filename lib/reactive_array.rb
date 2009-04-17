@@ -35,7 +35,7 @@ class ReactiveArray
 
   def react!(m)
 #     raise "subclassresponsibility"
-    puts "reacting on #{m.inspect}"
+    puts "\treacting on #{m.inspect}"
   end
 end
 
