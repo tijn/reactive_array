@@ -1,6 +1,7 @@
 require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
+require 'rake/gempackagetask'
 
 task :default => :test
 
@@ -37,4 +38,10 @@ Rake::RDocTask.new('rdoc') do |rdoc|
     rdoc.options << '--line-numbers' << '--inline-source'
     #rdoc.rdoc_files.include("app/**/*.rb")
 #     rdoc.main = 'README'
+end
+
+spec = eval(File.read('reactive_array.gemspec'))
+Rake::GemPackageTask.new(spec) do |pkg|
+  pkg.need_zip = false
+  pkg.need_tar = false
 end
