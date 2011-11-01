@@ -3,6 +3,7 @@ Gem::Specification.new do |s|
   s.summary = "Reactive Array."
   s.name = 'reactive_array'
   s.version = 1.0
+  s.authors = ["Tijn Schuurmans"]
   s.requirements << 'none'
   s.require_path = 'lib'
   s.files = ["lib/reactive_array.rb"]
