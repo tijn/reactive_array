@@ -1,4 +1,5 @@
 class ReactiveArray
+
   def initialize(*args)
     @array = Array.new(*args)
     yield self if block_given?
@@ -20,17 +21,18 @@ class ReactiveArray
 
   OPERATORS = ["&", "+", "-", "|", "<=>", "=="]
   OPERATORS.each do |operator|
-    class_eval(<<-EOS, __FILE__, __LINE__)
+    class_eval <<-end_eval, __FILE__, __LINE__
       def #{operator}(other_array)
         @array #{operator} other_array.to_a
       end
-    EOS
+    end_eval
   end
 
   def method_missing(m, *args, &block)
     x = @array.send(m, *args, &block)
     react!(m)
-    x
+    # if the @array returned self, we return self too (referring to our wrapper class of course)
+    x.equal?(@array) ? self : x
   end
 
   def react!(m)
