@@ -1,6 +1,6 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 group :test do
-  gem 'test-spec', :require => 'test/spec'
+  gem 'rake'
+  gem 'rspec'
 end
-
