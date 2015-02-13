@@ -4,6 +4,9 @@ Gem::Specification.new do |s|
   s.name = 'reactive_array'
   s.version = 1.1
   s.authors = ["Tijn Schuurmans"]
+  s.email = %q{tijn.schuurmans@gmail.com}
+  s.homepage = 'https://github.com/tijn/reactive_array'
+  s.licenses = ['MIT']
   s.requirements << 'none'
   s.require_path = 'lib'
   s.files = ["lib/reactive_array.rb"]
