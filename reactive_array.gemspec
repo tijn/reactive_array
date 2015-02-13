@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.summary = "Reactive Array."
   s.name = 'reactive_array'
-  s.version = 1.0
+  s.version = 1.1
   s.authors = ["Tijn Schuurmans"]
   s.requirements << 'none'
   s.require_path = 'lib'
